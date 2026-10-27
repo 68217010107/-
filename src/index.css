@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Anuphan', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif-thai: 'Sarabun', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+}
+
+.font-official {
+  font-family: 'Sarabun', sans-serif;
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Official A4 Sheet preview & print geometry */
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: 'Sarabun', sans-serif;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.a4-page-landscape {
+  width: 297mm;
+  min-height: 210mm;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: 'Sarabun', sans-serif;
+  box-sizing: border-box;
+  position: relative;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only-root {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .a4-page,
+  .a4-page-landscape {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .a4-page:last-child,
+  .a4-page-landscape:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}

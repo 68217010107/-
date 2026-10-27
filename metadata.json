@@ -1,0 +1,11 @@
+{
+  "name": "ระบบบันทึกและสรุปรายงานการเยี่ยมบ้านนักเรียน",
+  "description": "ระบบบริหารจัดการข้อมูลนักเรียน บันทึกการเยี่ยมบ้านพร้อมภาพถ่ายและพิกัด GPS แจ้งเตือนตารางนัดหมาย และส่งออกรายงาน PDF ปรับแต่งรูปแบบได้ตามมาตรฐาน สพฐ.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
